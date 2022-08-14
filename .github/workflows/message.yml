@@ -1,8 +1,11 @@
-name:' My job will help planning for display Message'
+name: 'My Job will help to Planning for display Message'
 on: [push]
 jobs:
-  Job-message:
+  Job-Message-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Welcome to Github Job Action"
-      - run: echo "Github Event Name is ${{Github.event_name}}"
+      - run: echo "Welcome to Github Runner Operating System is ${{runner.os}}"
+      - run: echo "Github Event Name is ${{github.event_name}}"
+      - run: ls ~
+      - run: pwd
+      - run: ls ${{ github.workspace }}
